@@ -2,6 +2,8 @@ package com.qefee.pj.qefee;
 
 import android.app.Application;
 
+import com.qefee.pj.elog.ELog;
+import com.qefee.pj.elog.ELogStrategy;
 import com.qefee.pj.qefee.util.BmobUtil;
 
 /**
@@ -34,5 +36,7 @@ public class App extends Application {
         super.onCreate();
         BmobUtil.init(this);
         BmobUtil.initServerTime();
+
+        ELog.setStrategy(ELogStrategy.ALL);
     }
 }

@@ -14,6 +14,12 @@ import com.qefee.pj.qefee.util.BmobUtil;
  */
 
 public class App extends Application {
+
+    /**
+     * log tag for App
+     */
+    private static final String TAG = "App";
+
     /**
      * Called when the application is starting, before any activity, service,
      * or receiver objects (excluding content providers) have been created.
@@ -27,5 +33,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         BmobUtil.init(this);
+        BmobUtil.initServerTime();
     }
 }

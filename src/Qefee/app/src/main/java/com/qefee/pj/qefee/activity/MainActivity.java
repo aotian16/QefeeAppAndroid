@@ -18,8 +18,6 @@ public class MainActivity extends BaseActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-
-        System.out.println("tongjin");
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

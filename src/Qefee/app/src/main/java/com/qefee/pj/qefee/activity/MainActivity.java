@@ -1,5 +1,6 @@
 package com.qefee.pj.qefee.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -16,7 +17,11 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        initToolbar();
+    }
+
+    private void initToolbar() {
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
     }
 
@@ -34,6 +39,10 @@ public class MainActivity extends BaseActivity {
                 return true;
             case R.id.action_settings:
                 i("click action_settings");
+
+                Intent intent = new Intent(this, SettingActivity.class);
+                startActivity(intent);
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

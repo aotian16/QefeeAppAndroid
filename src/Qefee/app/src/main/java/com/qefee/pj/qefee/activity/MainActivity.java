@@ -1,4 +1,4 @@
-package com.qefee.pj.qefee;
+package com.qefee.pj.qefee.activity;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -6,7 +6,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.qefee.pj.qefee.activity.BaseActivity;
+import com.qefee.pj.qefee.R;
+import com.qefee.pj.qefee.activity.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

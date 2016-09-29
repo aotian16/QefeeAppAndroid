@@ -1,4 +1,4 @@
-package com.qefee.pj.qefee.activity;
+package com.qefee.pj.qefee.activity.base;
 
 import com.qefee.pj.ebase.activity.EBaseActivity;
 

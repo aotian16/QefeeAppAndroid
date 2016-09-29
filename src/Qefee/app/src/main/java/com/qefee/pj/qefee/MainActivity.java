@@ -2,9 +2,9 @@ package com.qefee.pj.qefee;
 
 import android.os.Bundle;
 
-import com.qefee.pj.ebase.activity.EBaseActivity;
+import com.qefee.pj.qefee.activity.BaseActivity;
 
-public class MainActivity extends EBaseActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

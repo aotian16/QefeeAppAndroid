@@ -21,7 +21,9 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- bmob permission end -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- bmob permission end -->
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -42,6 +44,14 @@
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login"
+            android:parentActivityName=".activity.PostListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.PostListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
             android:parentActivityName=".activity.PostListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -1,18 +1,17 @@
 package com.qefee.pj.qefee.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.qefee.pj.qefee.R;
+import com.qefee.pj.qefee.activity.base.BaseActivity;
 
-public class PostListActivity extends AppCompatActivity {
+public class PostListActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +42,13 @@ public class PostListActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
-                startSettingsActivity();
+                startActivity(SettingsActivity.class);
                 return true;
 
             case R.id.action_login:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
-                startLoginActivity();
+                startActivity(LoginActivity.class);
                 return true;
 
             default:
@@ -58,15 +57,5 @@ public class PostListActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
-    }
-
-    private void startLoginActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    private void startSettingsActivity() {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
     }
 }

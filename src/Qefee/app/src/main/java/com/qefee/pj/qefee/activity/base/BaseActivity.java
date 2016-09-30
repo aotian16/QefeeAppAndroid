@@ -1,5 +1,7 @@
 package com.qefee.pj.qefee.activity.base;
 
+import android.content.Intent;
+
 import com.qefee.pj.ebase.activity.EBaseActivity;
 
 /**
@@ -11,5 +13,9 @@ import com.qefee.pj.ebase.activity.EBaseActivity;
  * @author tongjin
  */
 
-public class BaseActivity extends EBaseActivity {
+public abstract class BaseActivity extends EBaseActivity {
+    protected void startActivity(Class<?> cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
+    }
 }

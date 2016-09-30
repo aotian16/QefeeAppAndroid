@@ -1,10 +1,5 @@
 <resources>
     <string name="app_name">Qefee</string>
-    <string name="setting">Setting</string>
-    <string name="test">test</string>
-    <string name="title_activity_setting">SettingActivity</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_post_list">PostListActivity</string>
     <string name="action_settings">Settings</string>
 </resources>

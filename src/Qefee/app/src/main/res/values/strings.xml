@@ -92,4 +92,5 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_post_info">PostInfoActivity</string>
+    <string name="title_activity_new_post">NewPostActivity</string>
 </resources>

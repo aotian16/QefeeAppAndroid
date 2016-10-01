@@ -61,6 +61,10 @@
         <activity
             android:name=".activity.PostInfoActivity"
             android:label="@string/title_activity_post_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.NewPostActivity"
+            android:label="@string/title_activity_new_post"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

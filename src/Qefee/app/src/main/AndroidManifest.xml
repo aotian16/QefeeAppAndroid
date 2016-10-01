@@ -44,8 +44,8 @@
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppThemeNoActionBar"
-            android:parentActivityName=".activity.PostListActivity">
+            android:parentActivityName=".activity.PostListActivity"
+            android:theme="@style/AppThemeNoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.PostListActivity" />
@@ -58,6 +58,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.PostListActivity" />
         </activity>
+        <activity
+            android:name=".activity.PostInfoActivity"
+            android:label="@string/title_activity_post_info"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -96,6 +96,10 @@
     <string name="title_activity_content_type_list">ContentTypeList</string>
     <string name="title_activity_admin_menu">AdminMenuActivity</string>
 
+    <!--common-->
+    <string name="submit">submit</string>
+    <string name="delete">delete</string>
+
     <!--admin-->
     <string name="content_type_list_activity_button">ContentTypeListActivityButton</string>
 
@@ -104,4 +108,9 @@
     <string name="valueTextView">value</string>
     <string name="detailTextView">detail</string>
     <string name="title_activity_add_content_type">AddContentTypeActivity</string>
+
+    <!--AddContentTypeActivity-->
+    <string name="contentTypeHint">Content Type</string>
+    <string name="contentTypeDetailHint">Content Type Detail</string>
+    <string name="title_activity_content_type_detail">ContentTypeDetailActivity</string>
 </resources>

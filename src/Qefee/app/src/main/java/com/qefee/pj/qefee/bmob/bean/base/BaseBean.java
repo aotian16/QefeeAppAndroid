@@ -1,5 +1,7 @@
 package com.qefee.pj.qefee.bmob.bean.base;
 
+import cn.bmob.v3.BmobObject;
+
 /**
  * BaseBean.
  * <ul>
@@ -9,7 +11,7 @@ package com.qefee.pj.qefee.bmob.bean.base;
  * @author tongjin
  */
 
-public abstract class BaseBean {
+public abstract class BaseBean extends BmobObject {
     private Boolean isDelete;
     private Integer state;
 

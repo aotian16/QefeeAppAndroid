@@ -7,14 +7,16 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import com.qefee.pj.qefee.R;
 import com.qefee.pj.qefee.activity.base.BaseActivity;
 import com.qefee.pj.qefee.bmob.bean.base.ContentTypeBean;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -23,8 +25,11 @@ import cn.bmob.v3.listener.FindListener;
 
 public class ContentTypeListActivity extends BaseActivity {
 
+    private static final String BEAN_VALUE_KEY = "BEAN_VALUE_KEY";
+    private static final String BEAN_DETAIL_KEY = "BEAN_DETAIL_KEY";
+
     List<ContentTypeBean> contentTypeBeanList;
-    ArrayAdapter<ContentTypeBean> contentTypeBeanArrayAdapter;
+    SimpleAdapter contentTypeBeanArrayAdapter;
     private ListView contentTypeList;
     private Button addButton;
 
@@ -77,10 +82,39 @@ public class ContentTypeListActivity extends BaseActivity {
 
                     contentTypeBeanList = list;
 
+                    ArrayList<HashMap<String, Object>> listItem = new ArrayList<>();
+                    for (ContentTypeBean b : list) {
+                        HashMap<String, Object> map = new HashMap<>();
+                        map.put(BEAN_VALUE_KEY, b.getValue());
+                        map.put(BEAN_DETAIL_KEY, b.getDetail());
+                        listItem.add(map);
+                    }
+
+
                     int resID = R.layout.item_content_type;
-                    contentTypeBeanArrayAdapter = new ArrayAdapter<>(ContentTypeListActivity.this, resID, list);
+                    String[] from = {
+                            BEAN_VALUE_KEY,
+                            BEAN_DETAIL_KEY
+                    };
+                    int[] to = {
+                            R.id.valueTextView,
+                            R.id.detailTextView
+                    };
+                    contentTypeBeanArrayAdapter = new SimpleAdapter(
+                            ContentTypeListActivity.this,
+                            listItem,
+                            resID,
+                            from,
+                            to
+                    );
 
                     contentTypeList.setAdapter(contentTypeBeanArrayAdapter);
+                    contentTypeList.setOnItemClickListener((parent, view, position, id) -> {
+                        ContentTypeBean itemBean = list.get(position);
+                        Intent intent = new Intent(ContentTypeListActivity.this, ContentTypeDetailActivity.class);
+                        intent.putExtra("bean", itemBean);
+                        startActivity(intent);
+                    });
                 } else {
                     e("query fail.", e);
                 }

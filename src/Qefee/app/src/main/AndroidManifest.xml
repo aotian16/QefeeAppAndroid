@@ -96,6 +96,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.admin.ContentTypeListActivity" />
         </activity>
+        <activity
+            android:name=".activity.admin.ContentTypeDetailActivity"
+            android:label="@string/title_activity_content_type_detail"
+            android:parentActivityName=".activity.admin.ContentTypeListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.ContentTypeListActivity" />
+        </activity>
     </application>
 
 </manifest>

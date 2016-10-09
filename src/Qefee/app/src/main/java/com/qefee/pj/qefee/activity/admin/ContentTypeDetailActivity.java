@@ -5,28 +5,26 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import com.qefee.pj.qefee.R;
 import com.qefee.pj.qefee.activity.base.BaseActivity;
 import com.qefee.pj.qefee.bmob.bean.base.ContentTypeBean;
 
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.listener.UpdateListener;
 
-public class AddContentTypeActivity extends BaseActivity {
-
-    private EditText valueEditText;
-    private EditText detailEditText;
+public class ContentTypeDetailActivity extends BaseActivity {
     private Button submitButton;
+    private TextView valueTextView;
+    private TextView detailTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_content_type);
+        setContentView(R.layout.activity_content_type_detail);
         setupActionBar();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -38,36 +36,24 @@ public class AddContentTypeActivity extends BaseActivity {
             }
         });
 
-        valueEditText = (EditText) findViewById(R.id.valueEditText);
-        detailEditText = (EditText) findViewById(R.id.detailEditText);
+        ContentTypeBean bean = (ContentTypeBean)getIntent().getSerializableExtra("bean");
         submitButton = (Button) findViewById(R.id.submitButton);
+        valueTextView = (TextView) findViewById(R.id.valueTextView);
+        detailTextView = (TextView) findViewById(R.id.detailTextView);
+
+        valueTextView.setText(bean.getValue());
+        detailTextView.setText(bean.getDetail());
 
         submitButton.setOnClickListener(v -> {
-            String value = valueEditText.getText().toString();
-            String detail = detailEditText.getText().toString();
-
-            if (TextUtils.isEmpty(value)) {
-                showToast("value can not be empty.");
-                return;
-            }
-
-            if (TextUtils.isEmpty(detail)) {
-                showToast("detail can not be empty.");
-                return;
-            }
-
-            ContentTypeBean bean = new ContentTypeBean();
-            bean.setValue(value);
-            bean.setDetail(detail);
-            bean.save(new SaveListener<String>() {
+            bean.delete(new UpdateListener() {
                 @Override
-                public void done(String s, BmobException e) {
+                public void done(BmobException e) {
                     if (e == null) {
-                        i("add ContentTypeBean success. objectId = " + s);
-                        showToast("add success");
+                        i("delete ContentTypeBean success.");
+                        showToast("delete success");
                     } else {
-                        e("add ContentTypeBean fail.", e);
-                        showToast("add fail. error = " + e.getMessage());
+                        e("delete ContentTypeBean fail.", e);
+                        showToast("delete fail. error = " + e.getMessage());
                     }
                 }
             });

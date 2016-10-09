@@ -103,4 +103,5 @@
     <string name="addButton">add</string>
     <string name="valueTextView">value</string>
     <string name="detailTextView">detail</string>
+    <string name="title_activity_add_content_type">AddContentTypeActivity</string>
 </resources>

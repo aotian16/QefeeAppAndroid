@@ -35,11 +35,13 @@
             android:name=".activity.PostListActivity"
             android:label="@string/title_activity_post_list"
             android:theme="@style/AppThemeNoActionBar">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".activity.LoginActivity"
@@ -84,6 +86,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.admin.AddContentTypeActivity"
+            android:label="@string/title_activity_add_content_type"
+            android:parentActivityName=".activity.admin.ContentTypeListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.ContentTypeListActivity" />
         </activity>
     </application>
 

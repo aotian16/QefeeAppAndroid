@@ -93,4 +93,6 @@
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_post_info">PostInfoActivity</string>
     <string name="title_activity_new_post">NewPostActivity</string>
+    <string name="title_activity_content_type_list">ContentTypeList</string>
+    <string name="title_activity_admin_menu">AdminMenuActivity</string>
 </resources>

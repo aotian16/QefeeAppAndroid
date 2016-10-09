@@ -35,11 +35,11 @@
             android:name=".activity.PostListActivity"
             android:label="@string/title_activity_post_list"
             android:theme="@style/AppThemeNoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".activity.LoginActivity"
@@ -69,11 +69,22 @@
         <activity
             android:name=".activity.admin.ContentTypeListActivity"
             android:label="@string/title_activity_content_type_list"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".activity.admin.AdminMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.AdminMenuActivity" />
+        </activity>
         <activity
             android:name=".activity.admin.AdminMenuActivity"
             android:label="@string/title_activity_admin_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

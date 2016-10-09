@@ -13,4 +13,18 @@
     tools:context="com.qefee.pj.qefee.activity.admin.AdminMenuActivity"
     tools:showIn="@layout/activity_admin_menu">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/contentTypeListActivityButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/content_type_list_activity_button"/>
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>

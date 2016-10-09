@@ -95,4 +95,7 @@
     <string name="title_activity_new_post">NewPostActivity</string>
     <string name="title_activity_content_type_list">ContentTypeList</string>
     <string name="title_activity_admin_menu">AdminMenuActivity</string>
+
+    <!--admin-->
+    <string name="content_type_list_activity_button">ContentTypeListActivityButton</string>
 </resources>

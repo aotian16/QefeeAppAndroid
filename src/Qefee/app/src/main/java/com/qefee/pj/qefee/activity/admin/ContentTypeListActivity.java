@@ -3,13 +3,13 @@ package com.qefee.pj.qefee.activity.admin;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.qefee.pj.qefee.R;
+import com.qefee.pj.qefee.activity.base.BaseActivity;
 
-public class ContentTypeListActivity extends AppCompatActivity {
+public class ContentTypeListActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

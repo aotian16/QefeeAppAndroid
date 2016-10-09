@@ -132,7 +132,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         ActionBar ab = getSupportActionBar();
 
         // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true);
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     /**

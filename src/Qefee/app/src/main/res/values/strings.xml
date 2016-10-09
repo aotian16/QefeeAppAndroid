@@ -98,4 +98,9 @@
 
     <!--admin-->
     <string name="content_type_list_activity_button">ContentTypeListActivityButton</string>
+
+    <!--ContentTypeListActivity-->
+    <string name="addButton">add</string>
+    <string name="valueTextView">value</string>
+    <string name="detailTextView">detail</string>
 </resources>

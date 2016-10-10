@@ -14,6 +14,7 @@ import android.widget.SimpleAdapter;
 import com.qefee.pj.qefee.R;
 import com.qefee.pj.qefee.activity.base.BaseActivity;
 import com.qefee.pj.qefee.bmob.bean.base.ContentTypeBean;
+import com.victor.loading.rotate.RotateLoading;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +33,7 @@ public class ContentTypeListActivity extends BaseActivity {
     SimpleAdapter contentTypeBeanArrayAdapter;
     private ListView contentTypeList;
     private Button addButton;
+    RotateLoading rotateLoadingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class ContentTypeListActivity extends BaseActivity {
 
         addButton = (Button) findViewById(R.id.addButton);
         contentTypeList = (ListView) findViewById(R.id.contentTypeList);
+        rotateLoadingView = (RotateLoading) findViewById(R.id.rotateLoadingView);
 
         addButton.setOnClickListener(v -> {
             Intent intent = new Intent(ContentTypeListActivity.this, AddContentTypeActivity.class);
@@ -73,10 +76,12 @@ public class ContentTypeListActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
 
+        rotateLoadingView.start();
         BmobQuery<ContentTypeBean> query = new BmobQuery<>();
         query.findObjects(new FindListener<ContentTypeBean>() {
             @Override
             public void done(List<ContentTypeBean> list, BmobException e) {
+                rotateLoadingView.stop();
                 if (e == null) {
                     i("query success. size = " + list.size());
 

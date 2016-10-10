@@ -37,4 +37,12 @@
 
     </ListView>
 
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotateLoadingView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:loading_width="5dp"
+        app:loading_color="@color/colorPrimary"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>

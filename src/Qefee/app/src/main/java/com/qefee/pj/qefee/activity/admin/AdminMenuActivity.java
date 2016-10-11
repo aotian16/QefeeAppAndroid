@@ -14,6 +14,7 @@ import com.qefee.pj.qefee.activity.base.BaseActivity;
 public class AdminMenuActivity extends BaseActivity {
 
     private Button contentTypeListActivityButton;
+    private Button tagListActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,15 @@ public class AdminMenuActivity extends BaseActivity {
         });
 
         contentTypeListActivityButton = (Button) findViewById(R.id.contentTypeListActivityButton);
+        tagListActivityButton = (Button) findViewById(R.id.tagListActivityButton);
 
         contentTypeListActivityButton.setOnClickListener(v -> {
             Intent intent = new Intent(AdminMenuActivity.this, ContentTypeListActivity.class);
+            startActivity(intent);
+        });
+
+        tagListActivityButton.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminMenuActivity.this, TagListActivity.class);
             startActivity(intent);
         });
     }

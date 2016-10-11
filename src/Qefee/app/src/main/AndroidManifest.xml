@@ -105,6 +105,33 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.admin.ContentTypeListActivity" />
         </activity>
+        <activity
+            android:name=".activity.admin.TagListActivity"
+            android:label="@string/title_activity_tag_list"
+            android:parentActivityName=".activity.admin.AdminMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.AdminMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.admin.AddTagActivity"
+            android:label="@string/title_activity_add_tag"
+            android:parentActivityName=".activity.admin.TagListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.TagListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.admin.TagDetailActivity"
+            android:label="@string/title_activity_tag_detail"
+            android:parentActivityName=".activity.admin.TagListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.TagListActivity" />
+        </activity>
     </application>
 
 </manifest>

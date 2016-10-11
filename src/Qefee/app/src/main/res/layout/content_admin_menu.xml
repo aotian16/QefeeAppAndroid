@@ -18,12 +18,18 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <Button
                 android:id="@+id/contentTypeListActivityButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/content_type_list_activity_button"/>
+            <Button
+                android:id="@+id/tagListActivityButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_list_activity_button"/>
         </LinearLayout>
     </ScrollView>
 

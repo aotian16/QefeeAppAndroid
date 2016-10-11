@@ -1,4 +1,6 @@
-package com.qefee.pj.qefee.bmob.bean.base;
+package com.qefee.pj.qefee.bmob.bean;
+
+import com.qefee.pj.qefee.bmob.bean.base.BaseBean;
 
 /**
  * PostBean.

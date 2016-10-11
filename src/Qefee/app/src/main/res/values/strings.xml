@@ -102,6 +102,7 @@
 
     <!--admin-->
     <string name="content_type_list_activity_button">ContentTypeListActivityButton</string>
+    <string name="tag_list_activity_button">TagListActivityButton</string>
 
     <!--ContentTypeListActivity-->
     <string name="addButton">add</string>
@@ -113,4 +114,15 @@
     <string name="contentTypeHint">Content Type</string>
     <string name="contentTypeDetailHint">Content Type Detail</string>
     <string name="title_activity_content_type_detail">ContentTypeDetailActivity</string>
+    <string name="title_activity_tag_list">TagListActivity</string>
+
+    <!--TagListActivity-->
+    <string name="typeTextView">type</string>
+    <string name="title_activity_add_tag">AddTagActivity</string>
+    <string name="title_activity_tag_detail">TagDetailActivity</string>
+
+    <!--AddTagActivity-->
+    <string name="tagHint">Tag</string>
+    <string name="tagDetailHint">Tag Detail</string>
+    <string name="tagTypeHint">Tag Type</string>
 </resources>

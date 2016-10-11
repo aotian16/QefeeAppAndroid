@@ -1,17 +1,20 @@
-package com.qefee.pj.qefee.bmob.bean.base;
+package com.qefee.pj.qefee.bmob.bean;
+
+import com.qefee.pj.qefee.bmob.bean.base.BaseBean;
 
 /**
- * ContentTypeBean.
+ * TagBean.
  * <ul>
- * <li>date: 16/10/9</li>
+ * <li>date: 16/10/11</li>
  * </ul>
  *
  * @author tongjin
  */
 
-public class ContentTypeBean extends BaseBean {
+public class TagBean extends BaseBean {
     private String value;
     private String detail;
+    private String type; // 0 = content type, 1 = manage type
 
     public String getValue() {
         return value;
@@ -27,5 +30,13 @@ public class ContentTypeBean extends BaseBean {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

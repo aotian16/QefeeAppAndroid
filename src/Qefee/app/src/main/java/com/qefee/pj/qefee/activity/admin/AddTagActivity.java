@@ -12,21 +12,22 @@ import android.widget.EditText;
 
 import com.qefee.pj.qefee.R;
 import com.qefee.pj.qefee.activity.base.BaseActivity;
-import com.qefee.pj.qefee.bmob.bean.ContentTypeBean;
+import com.qefee.pj.qefee.bmob.bean.TagBean;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-public class AddContentTypeActivity extends BaseActivity {
+public class AddTagActivity extends BaseActivity {
 
     private EditText valueEditText;
     private EditText detailEditText;
+    private EditText typeEditText;
     private Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_content_type);
+        setContentView(R.layout.activity_add_tag);
         setupActionBar();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -40,11 +41,13 @@ public class AddContentTypeActivity extends BaseActivity {
 
         valueEditText = (EditText) findViewById(R.id.valueEditText);
         detailEditText = (EditText) findViewById(R.id.detailEditText);
+        typeEditText = (EditText) findViewById(R.id.typeEditText);
         submitButton = (Button) findViewById(R.id.submitButton);
 
         submitButton.setOnClickListener(v -> {
             String value = valueEditText.getText().toString();
             String detail = detailEditText.getText().toString();
+            String type = typeEditText.getText().toString();
 
             if (TextUtils.isEmpty(value)) {
                 showToast("value can not be empty.");
@@ -56,17 +59,23 @@ public class AddContentTypeActivity extends BaseActivity {
                 return;
             }
 
-            ContentTypeBean bean = new ContentTypeBean();
+            if (TextUtils.isEmpty(type)) {
+                showToast("type can not be empty.");
+                return;
+            }
+
+            TagBean bean = new TagBean();
             bean.setValue(value);
             bean.setDetail(detail);
+            bean.setType(type);
             bean.save(new SaveListener<String>() {
                 @Override
                 public void done(String s, BmobException e) {
                     if (e == null) {
-                        i("add ContentTypeBean success. objectId = " + s);
+                        i("add TagBean success. objectId = " + s);
                         showToast("add success");
                     } else {
-                        e("add ContentTypeBean fail.", e);
+                        e("add TagBean fail.", e);
                         showToast("add fail. error = " + e.getMessage());
                     }
                 }

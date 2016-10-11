@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.qefee.pj.qefee.R;
 import com.qefee.pj.qefee.activity.base.BaseActivity;
@@ -21,7 +22,7 @@ public class AddTagActivity extends BaseActivity {
 
     private EditText valueEditText;
     private EditText detailEditText;
-    private EditText typeEditText;
+    private Spinner typeSpinner;
     private Button submitButton;
 
     @Override
@@ -41,13 +42,13 @@ public class AddTagActivity extends BaseActivity {
 
         valueEditText = (EditText) findViewById(R.id.valueEditText);
         detailEditText = (EditText) findViewById(R.id.detailEditText);
-        typeEditText = (EditText) findViewById(R.id.typeEditText);
+        typeSpinner = (Spinner) findViewById(R.id.typeSpinner);
         submitButton = (Button) findViewById(R.id.submitButton);
 
         submitButton.setOnClickListener(v -> {
             String value = valueEditText.getText().toString();
             String detail = detailEditText.getText().toString();
-            String type = typeEditText.getText().toString();
+            int type = typeSpinner.getSelectedItemPosition();
 
             if (TextUtils.isEmpty(value)) {
                 showToast("value can not be empty.");
@@ -56,11 +57,6 @@ public class AddTagActivity extends BaseActivity {
 
             if (TextUtils.isEmpty(detail)) {
                 showToast("detail can not be empty.");
-                return;
-            }
-
-            if (TextUtils.isEmpty(type)) {
-                showToast("type can not be empty.");
                 return;
             }
 

@@ -91,12 +91,16 @@ public class TagListActivity extends BaseActivity {
 
                     tagBeanList = list;
 
+                    CharSequence[] tagTypes = getResources().getTextArray(R.array.tagTypes);
                     ArrayList<HashMap<String, Object>> listItem = new ArrayList<>();
                     for (TagBean b : list) {
                         HashMap<String, Object> map = new HashMap<>();
                         map.put(BEAN_VALUE_KEY, b.getValue());
                         map.put(BEAN_DETAIL_KEY, b.getDetail());
-                        map.put(BEAN_TYPE_KEY, b.getType());
+                        Integer type = b.getType();
+                        if (type != null) {
+                            map.put(BEAN_TYPE_KEY, tagTypes[type]);
+                        }
                         listItem.add(map);
                     }
 

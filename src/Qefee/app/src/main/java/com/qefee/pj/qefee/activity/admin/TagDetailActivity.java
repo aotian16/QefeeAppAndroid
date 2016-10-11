@@ -47,7 +47,11 @@ public class TagDetailActivity extends BaseActivity {
 
         valueTextView.setText(bean.getValue());
         detailTextView.setText(bean.getDetail());
-        typeTextView.setText(bean.getType());
+        CharSequence[] tagTypes = getResources().getTextArray(R.array.tagTypes);
+        Integer type = bean.getType();
+        if (type != null) {
+            typeTextView.setText(tagTypes[type]);
+        }
 
         submitButton.setOnClickListener(v -> {
             bean.delete(new UpdateListener() {

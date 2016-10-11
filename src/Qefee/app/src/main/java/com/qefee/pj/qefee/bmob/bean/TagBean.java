@@ -14,7 +14,7 @@ import com.qefee.pj.qefee.bmob.bean.base.BaseBean;
 public class TagBean extends BaseBean {
     private String value;
     private String detail;
-    private String type; // 0 = content type, 1 = manage type
+    private Integer type; // 0 = content type, 1 = manage type
 
     public String getValue() {
         return value;
@@ -32,11 +32,11 @@ public class TagBean extends BaseBean {
         this.detail = detail;
     }
 
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 }

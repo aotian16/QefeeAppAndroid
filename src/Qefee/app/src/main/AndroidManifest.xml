@@ -150,6 +150,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.admin.VisibilityListActivity" />
         </activity>
+        <activity
+            android:name=".activity.admin.VisibilityDetailActivity"
+            android:label="@string/title_activity_visibility_detail"
+            android:parentActivityName=".activity.admin.VisibilityListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.VisibilityListActivity" />
+        </activity>
     </application>
 
 </manifest>

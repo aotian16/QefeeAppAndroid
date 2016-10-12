@@ -120,7 +120,7 @@ public class VisibilityListActivity extends BaseActivity {
                     visibilityList.setAdapter(visibilityBeanArrayAdapter);
                     visibilityList.setOnItemClickListener((parent, view, position, id) -> {
                         VisibilityBean itemBean = list.get(position);
-                        Intent intent = new Intent(VisibilityListActivity.this, ContentTypeDetailActivity.class);
+                        Intent intent = new Intent(VisibilityListActivity.this, VisibilityDetailActivity.class);
                         intent.putExtra("bean", itemBean);
                         startActivity(intent);
                     });

@@ -127,4 +127,10 @@
     <string name="tagDetailHint">Tag Detail</string>
     <string name="tagTypeHint">Tag Type</string>
     <string name="title_activity_visibility_list">VisibilityListActivity</string>
+    <string name="title_activity_add_visibility">AddVisibilityActivity</string>
+
+    <!--AddVisibilityActivity-->
+    <string name="visibilityHint">Visibility</string>
+    <string name="visibilityDetailHint">Visibility Detail</string>
+
 </resources>

@@ -55,7 +55,7 @@ public class VisibilityListActivity extends BaseActivity {
         rotateLoadingView = (RotateLoading) findViewById(R.id.rotateLoadingView);
 
         addButton.setOnClickListener(v -> {
-            Intent intent = new Intent(VisibilityListActivity.this, AddContentTypeActivity.class);
+            Intent intent = new Intent(VisibilityListActivity.this, AddVisibilityActivity.class);
             startActivity(intent);
         });
     }
@@ -76,10 +76,10 @@ public class VisibilityListActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
 
-        requestContentTypeList();
+        requestVisibilityBeanList();
     }
 
-    private void requestContentTypeList() {
+    private void requestVisibilityBeanList() {
         rotateLoadingView.start();
         BmobQuery<VisibilityBean> query = new BmobQuery<>();
         query.findObjects(new FindListener<VisibilityBean>() {

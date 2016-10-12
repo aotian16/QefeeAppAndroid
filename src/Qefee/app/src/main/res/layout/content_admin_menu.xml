@@ -30,6 +30,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tag_list_activity_button"/>
+            <Button
+                android:id="@+id/visibilityListActivityButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/visibility_list_activity_button"/>
         </LinearLayout>
     </ScrollView>
 

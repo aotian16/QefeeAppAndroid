@@ -103,6 +103,7 @@
     <!--admin-->
     <string name="content_type_list_activity_button">ContentTypeListActivityButton</string>
     <string name="tag_list_activity_button">TagListActivityButton</string>
+    <string name="visibility_list_activity_button">VisibilityListActivityButton</string>
 
     <!--ContentTypeListActivity-->
     <string name="addButton">add</string>
@@ -125,4 +126,5 @@
     <string name="tagHint">Tag</string>
     <string name="tagDetailHint">Tag Detail</string>
     <string name="tagTypeHint">Tag Type</string>
+    <string name="title_activity_visibility_list">VisibilityListActivity</string>
 </resources>

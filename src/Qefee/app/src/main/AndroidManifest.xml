@@ -132,6 +132,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.admin.TagListActivity" />
         </activity>
+        <activity
+            android:name=".activity.admin.VisibilityListActivity"
+            android:label="@string/title_activity_visibility_list"
+            android:parentActivityName=".activity.admin.AdminMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.AdminMenuActivity" />
+        </activity>
     </application>
 
 </manifest>

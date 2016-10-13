@@ -133,5 +133,6 @@
     <string name="visibilityHint">Visibility</string>
     <string name="visibilityDetailHint">Visibility Detail</string>
     <string name="title_activity_visibility_detail">VisibilityDetailActivity</string>
+    <string name="title_activity_catalogue_list">CatalogueListActivity</string>
 
 </resources>

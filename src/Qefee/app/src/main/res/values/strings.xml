@@ -104,6 +104,7 @@
     <string name="content_type_list_activity_button">ContentTypeListActivityButton</string>
     <string name="tag_list_activity_button">TagListActivityButton</string>
     <string name="visibility_list_activity_button">VisibilityListActivityButton</string>
+    <string name="catalogue_list_activity_button">CatalogueListActivityButton</string>
 
     <!--ContentTypeListActivity-->
     <string name="addButton">add</string>
@@ -134,5 +135,11 @@
     <string name="visibilityDetailHint">Visibility Detail</string>
     <string name="title_activity_visibility_detail">VisibilityDetailActivity</string>
     <string name="title_activity_catalogue_list">CatalogueListActivity</string>
+    <string name="title_activity_add_catalogue">AddCatalogueActivity</string>
+
+    <!--AddCatalogueActivity-->
+    <string name="catalogueHint">Catalogue</string>
+    <string name="catalogueDetailHint">Catalogue Detail</string>
+    <string name="title_activity_catalogue_detail">CatalogueDetailActivity</string>
 
 </resources>

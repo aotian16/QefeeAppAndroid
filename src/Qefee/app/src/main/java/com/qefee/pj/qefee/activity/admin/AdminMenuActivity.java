@@ -16,6 +16,7 @@ public class AdminMenuActivity extends BaseActivity {
     private Button contentTypeListActivityButton;
     private Button tagListActivityButton;
     private Button visibilityListActivityButton;
+    private Button catalogueListActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class AdminMenuActivity extends BaseActivity {
         contentTypeListActivityButton = (Button) findViewById(R.id.contentTypeListActivityButton);
         tagListActivityButton = (Button) findViewById(R.id.tagListActivityButton);
         visibilityListActivityButton = (Button) findViewById(R.id.visibilityListActivityButton);
+        catalogueListActivityButton = (Button) findViewById(R.id.catalogueListActivityButton);
 
         contentTypeListActivityButton.setOnClickListener(v -> {
             Intent intent = new Intent(AdminMenuActivity.this, ContentTypeListActivity.class);
@@ -49,6 +51,11 @@ public class AdminMenuActivity extends BaseActivity {
 
         visibilityListActivityButton.setOnClickListener(v -> {
             Intent intent = new Intent(AdminMenuActivity.this, VisibilityListActivity.class);
+            startActivity(intent);
+        });
+
+        catalogueListActivityButton.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminMenuActivity.this, CatalogueListActivity.class);
             startActivity(intent);
         });
     }

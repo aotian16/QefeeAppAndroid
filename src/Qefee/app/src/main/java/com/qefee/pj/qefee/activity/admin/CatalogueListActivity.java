@@ -1,5 +1,6 @@
 package com.qefee.pj.qefee.activity.admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -30,7 +31,7 @@ public class CatalogueListActivity extends BaseActivity {
 
     List<CatalogueBean> contentTypeBeanList;
     SimpleAdapter contentTypeBeanArrayAdapter;
-    private ListView contentTypeList;
+    private ListView catalogueList;
     private Button addButton;
     RotateLoading rotateLoadingView;
 
@@ -50,12 +51,12 @@ public class CatalogueListActivity extends BaseActivity {
         });
 
         addButton = (Button) findViewById(R.id.addButton);
-        contentTypeList = (ListView) findViewById(R.id.contentTypeList);
+        catalogueList = (ListView) findViewById(R.id.catalogueList);
         rotateLoadingView = (RotateLoading) findViewById(R.id.rotateLoadingView);
 
         addButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(CatalogueListActivity.this, AddCatalogueActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(CatalogueListActivity.this, AddCatalogueActivity.class);
+            startActivity(intent);
         });
     }
 
@@ -116,8 +117,8 @@ public class CatalogueListActivity extends BaseActivity {
                             to
                     );
 
-                    contentTypeList.setAdapter(contentTypeBeanArrayAdapter);
-                    contentTypeList.setOnItemClickListener((parent, view, position, id) -> {
+                    catalogueList.setAdapter(contentTypeBeanArrayAdapter);
+                    catalogueList.setOnItemClickListener((parent, view, position, id) -> {
 //                        CatalogueBean itemBean = list.get(position);
 //                        Intent intent = new Intent(CatalogueListActivity.this, CatalogueDetailActivity.class);
 //                        intent.putExtra("bean", itemBean);

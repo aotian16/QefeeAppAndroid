@@ -168,6 +168,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.qefee.pj.qefee.activity.admin.AdminMenuActivity" />
         </activity>
+        <activity
+            android:name=".activity.admin.AddCatalogueActivity"
+            android:label="@string/title_activity_add_catalogue"
+            android:parentActivityName=".activity.admin.CatalogueListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qefee.pj.qefee.activity.admin.CatalogueListActivity" />
+        </activity>
     </application>
 
 </manifest>
